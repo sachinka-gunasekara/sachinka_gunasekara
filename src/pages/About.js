@@ -1,3 +1,4 @@
+import React from 'react';
 import slack from '../images/slack-svgrepo-com.svg'
 import github from '../images/github-svgrepo-com.svg'
 import git from '../images/git-svgrepo-com.svg'

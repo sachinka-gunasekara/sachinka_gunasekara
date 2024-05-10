@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         'port-yellow': '#F6CF05',
         'port-hover': '#faab02',
+        'port-opyellow': '#f6cf0529',
       },
 
       screens: {

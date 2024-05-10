@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -7,11 +8,11 @@ import linkedin from '../images/linkedin.svg'
 import behance from '../images/behance.svg'
 import github from '../images/github.svg'
 import About from './About';
+import Projects from './Projects';
 
 const navigation = [
   { name: 'About', href: '#about' },
-  { name: 'Experience', href: '#' },
-  { name: 'Project', href: '#' },
+  { name: 'Project', href: '#projects' },
   { name: 'Contact', href: '#' },
 ]
 
@@ -20,6 +21,14 @@ const scrollToSection = (id) => {
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' });
   }
+};
+
+const handleDownload = () => {
+  // Construct the absolute URL of the CV file
+  const cvUrl = process.env.PUBLIC_URL + '/my_cv.pdf';
+
+  // Open the PDF in a new tab
+  window.open(cvUrl, '_blank');
 };
 
 export default function Home() {
@@ -116,8 +125,8 @@ export default function Home() {
               </div>
 
               <div className='flex gap-10 justify-center'>
-                <button className='px-6 py-3 text-black rounded-full transition ease-in-out delay-150 bg-port-yellow hover:-translate-y-1 hover:scale-105 hover:bg-port-hover duration-300 ...'>Download CV</button>
-                <button className='px-6 py-3 text-port-yellow border-2 rounded-full transition ease-in-out delay-150 border-port-yellow hover:-translate-y-1 hover:scale-105 hover:border-port-hover duration-300 ...'>Contact Info</button>
+                <button className='px-6 py-2 text-black rounded-full transition ease-in-out delay-150 bg-port-yellow hover:-translate-y-1 hover:scale-105 hover:bg-port-hover duration-300 ...'>Download CV</button>
+                <button className='px-6 py-2 text-port-yellow border-2 rounded-full transition ease-in-out delay-150 border-port-yellow hover:-translate-y-1 hover:scale-105 hover:border-port-hover duration-300 ...'>Contact Info</button>
               </div>
 
               <div className='flex justify-center gap-6 mt-8'>
@@ -143,6 +152,9 @@ export default function Home() {
 
           <section id="about">
             <About />
+          </section>
+          <section id="projects">
+            <Projects />
           </section>
         </div>
       </div>
