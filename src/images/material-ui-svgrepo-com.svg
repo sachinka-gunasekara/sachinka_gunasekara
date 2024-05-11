@@ -1,7 +1,14 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#f6cf05" stroke="#f6cf05">
-<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-<g id="SVGRepo_iconCarrier"> <title>material_ui</title> <rect width="24" height="24" fill="none"/> <path d="M8,16.61V15.37l6-3.46V7.23L9,10.12,4,7.23V13l-1,.58L2,13V5l1.07-.62L9,7.81l3.93-2.27,2-1.16L16,5v8.06L10.92,16,15,18.33l5-2.9V11l1-.58L22,11v5.58l-7,4.06-7-4M22,9.75l-1,.58-1-.58V8.58L21,8l1,.58Z"/> </g>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 -26 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+    <g>
+				<polygon fill="#00B0FF" points="0 110.848 0 0 96 55.424 96 92.3733333 32 55.424 32 129.322667">
+</polygon>
+				<polygon fill="#0081CB" points="96 55.424 192 0 192 110.848 128 147.797333 96 129.322667 160 92.3733333 160 55.424 96 92.3733333">
+</polygon>
+				<polygon fill="#00B0FF" points="96 129.322667 96 166.272 160 203.221333 160 166.272">
+</polygon>
+				<path d="M160,203.221333 L256,147.797333 L256,73.8986667 L224,92.3733333 L224,129.322667 L160,166.272 L160,203.221333 Z M224,55.424 L224,18.4746667 L256,5.68434189e-14 L256,36.9493333 L224,55.424 Z" fill="#0081CB">
+</path>
+		</g>
+</svg>

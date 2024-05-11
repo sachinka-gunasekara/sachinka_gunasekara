@@ -13,7 +13,7 @@ import Contact from './Footer';
 
 const navigation = [
   { name: 'About', href: '#about' },
-  { name: 'Project', href: '#projects' },
+  { name: 'Projects', href: '#projects' },
   { name: 'Contact', href: '#contact' },
 ]
 
@@ -112,9 +112,9 @@ export default function Home() {
 
             <div>
               <div className=''>
-                <h1 className='text-port-yellow uppercase	text-5xl sm:text-4xl mt-2 mb-3 font-bold'>designer & developer</h1>
-                <h3 className='text-xl text-white mb-3'>Hello, I' m</h3>
-                <h1 className='text-5xl sm:text-4xl text-white mb-4'>Sachinka Gunasekara</h1>
+                <h1 className='text-port-yellow uppercase	text-5xl sm:text-4xl mt-2 mb-4 font-bold'>designer & developer</h1>
+                <h3 className='text-xl text-white mb-4'>Hello, I' m</h3>
+                <h1 className='text-5xl sm:text-4xl text-white mb-5'>Sachinka Gunasekara</h1>
               </div>
 
               <div className='flex gap-10 justify-center'>
@@ -123,11 +123,11 @@ export default function Home() {
                 </a>
 
                 <a href="#contact">
-                <button href="#contact" className='px-6 py-2 text-port-yellow border-2 rounded-full transition ease-in-out delay-150 border-port-yellow hover:-translate-y-1 hover:scale-105 hover:border-port-hover duration-300 ...'>Contact Info</button>
+                <button href="#contact" className='px-6 py-2 text-port-yellow border-2 rounded-full transition ease-in-out delay-150 hover:text-port-hover border-port-yellow hover:-translate-y-1 hover:scale-105 hover:border-port-hover duration-300 ...'>Contact Info</button>
               </a>
               </div>
 
-              <div className='flex justify-center gap-6 mt-8'>
+              <div className='flex justify-center gap-8 mt-10'>
                 <img
                     className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
                     src={linkedin}

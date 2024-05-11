@@ -19,7 +19,7 @@ export default function Home() {
           
           <div className='flex justify-center gap-5 py-2 sm:text-justify sm:flex-col xs:items-center sm:pl-0'>
 
-                <div className='flex items-center w-fit px-6 py-2 text-port-yellow border-2 rounded-full border-port-yellow'>
+                <div className='flex items-center w-fit px-6 py-2 text-port-yellow border-2 rounded-full border-port-yellow transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 ...'>
                     <img
                         className="size-5 mr-1"
                         src={email}
@@ -28,7 +28,7 @@ export default function Home() {
                     <a href="mailto:sachinka.gunasekara@gmail.com">sachinka.gunasekara@gmail.com</a>
                 </div>
 
-                <div className='flex items-center w-fit px-6 py-2 text-port-yellow border-2 rounded-full border-port-yellow '>
+                <div className='flex items-center w-fit px-6 py-2 text-port-yellow border-2 rounded-full border-port-yellow transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 ...'>
                     <img
                         className="size-5 mr-1"
                         src={whatsapp}
