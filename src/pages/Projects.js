@@ -22,10 +22,10 @@ export default function Home() {
 
           <div className='flex justify-between gap-5 flex-wrap sm:flex-col mb-5'>
             
-              <div className="flex-1 bg-port-opyellow rounded-xl">
+              <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
                 <div className='aspect-auto'>
                     <img
-                      className="mt-5 mb-10 mx-auto px-5 transition ease-in-out delay-75 hover:scale-105"
+                      className="mt-5 mb-10 mx-auto px-5"
                       src={portfolio}
                       alt="Portfolio"
                     />
@@ -33,6 +33,7 @@ export default function Home() {
                 <div className='text-white text-2xl text-center m-5 my-2'>Portfolio Website</div>
                 <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX, Development</div>
                 <div className='text-white text-sm text-justify m-5 line-clamp-3'>A portfolio website, from dynamic React components to polished designs with Tailwind CSS</div>
+                <div className='text-white text-sm text-center m-5 my-2'>Technologies: ReactJS, Tailwind CSS</div>
             
                 <div className='flex gap-10 justify-center items-center m-5'>
                     <img
@@ -51,9 +52,9 @@ export default function Home() {
               </div>
             
 
-              <div className="flex-1 bg-port-opyellow rounded-xl">
+              <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
                 <img
-                      className="mt-5 mb-10 mx-auto px-5 transition ease-in-out delay-75 hover:scale-105"
+                      className="mt-5 mb-10 mx-auto px-5"
                       src={slahandyfix}
                       alt="SLHandyFix"
                     />
@@ -61,6 +62,7 @@ export default function Home() {
               <div className='text-white text-2xl text-center m-5 my-2'>SLHandyFix</div>
                 <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX, Development, Group Project</div>
                 <div className='text-white text-sm text-justify m-5 line-clamp-3'>A platform to connect service providers and customers under one roof for facilitating their needs</div>
+                <div className='text-white text-sm text-center m-5 my-2'>Technologies: React, React Native, NodeJS, Express, MySQL</div>
             
                 <div className='flex gap-10 justify-center m-5'>
                     <img
@@ -72,9 +74,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex-1 bg-port-opyellow rounded-xl">
+              <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
                   <img
-                    className="mt-5 mb-10 mx-auto px-5 transition ease-in-out delay-75 hover:scale-105"
+                    className="mt-5 mb-10 mx-auto px-5"
                     src={fitbot}
                     alt="FitBot"
                   />
@@ -82,6 +84,7 @@ export default function Home() {
                   <div className='text-white text-2xl text-center m-5 my-2'>FitBot</div>
                   <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX, Development, Group Project</div>
                   <div className='text-white text-sm text-justify m-5 line-clamp-3 h-[60px]'>A platform that could be used by the Gym management to manage their members</div>
+                  <div className='text-white text-sm text-center m-5 my-2'>Technologies: HTML5, CSS, Javascript, Java, MySQL</div>
               
                   <div className='flex gap-10 justify-center m-5'>
                       <img
@@ -97,9 +100,9 @@ export default function Home() {
 
           <div className='flex justify-between gap-5 flex-wrap sm:flex-col mb-5'>
             
-          <div className="flex-1 bg-port-opyellow rounded-xl">
+          <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
                 <img
-                  className="mt-5 mb-10 mx-auto px-5 transition ease-in-out delay-75 hover:scale-105"
+                  className="mt-5 mb-10 mx-auto px-5"
                   src={guru}
                   alt="Guru"
                 />
@@ -118,10 +121,10 @@ export default function Home() {
                 </div>
               </div>
 
-            <div className="flex-1 bg-port-opyellow rounded-xl">
+            <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
               <div className='aspect-auto'>
                   <img
-                    className="mt-5 mb-10 mx-auto px-5 transition ease-in-out delay-75 hover:scale-105"
+                    className="mt-5 mb-10 mx-auto px-5 5"
                     src={leafylove}
                     alt="LeafyLove"
                   />
@@ -141,9 +144,9 @@ export default function Home() {
             </div>
           
 
-            <div className="flex-1 bg-port-opyellow rounded-xl">
+            <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
             <img
-                  className="mt-5 mb-10 mx-auto px-5 transition ease-in-out delay-75 hover:scale-105"
+                  className="mt-5 mb-10 mx-auto px-5"
                   src={coffee}
                   alt="coffeenook"
                 />
@@ -164,9 +167,9 @@ export default function Home() {
               </div>
 
               <div className='flex justify-between gap-5 flex-wrap sm:flex-col mb-5'>
-              <div className="flex-1 bg-port-opyellow rounded-xl">
+              <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
                 <img
-                  className="mt-5 mb-10 mx-auto px-5 transition ease-in-out delay-75 hover:scale-105"
+                  className="mt-5 mb-10 mx-auto px-5"
                   src={dubai}
                   alt="Travel Website"
                 />
@@ -185,9 +188,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex-1 bg-port-opyellow rounded-xl">
+              <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
                 <img
-                  className="mt-5 mb-10 mx-auto px-5 transition ease-in-out delay-75 hover:scale-105"
+                  className="mt-5 mb-10 mx-auto px-5"
                   src={eatme}
                   alt="Eat me"
                 />
@@ -218,9 +221,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex-1 bg-port-opyellow rounded-xl">
+              <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
                 <img
-                  className="mt-5 mb-10 mx-auto px-5 transition ease-in-out delay-75 hover:scale-105"
+                  className="mt-5 mb-10 mx-auto px-5"
                   src={italian}
                   alt="Classic Italian"
                 />

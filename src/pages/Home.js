@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import profile from '../images/profileX.svg'
@@ -24,8 +23,26 @@ const scrollToSection = (id) => {
   }
 };
 
+const texts = [
+  "UI/UX ENGINEER",
+  "UI/UX DESIGNER",
+  "FRONTEND DEVELOPER",
+  "SOFTWARE ENGINEER(FRONT)",
+];
+
+
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
 
   return (
     <div className="bg-neutral-900 bg-gradient-to-r from-neutral-900 to-slate-700">
@@ -100,8 +117,8 @@ export default function Home() {
       </header>
 
       <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-6xl pt-24">
-          <div className="text-center flex justify-evenly sm:flex-col items-center mb-10">
+        <div className="mx-auto max-w-6xl pt-10">
+          <div className="text-center flex justify-evenly flex-col items-center mb-10">
             <div className='size-80 flex justify-center rounded-full'>
               <img
                   className="rounded-full"
@@ -112,7 +129,15 @@ export default function Home() {
 
             <div>
               <div className=''>
-                <h1 className='text-port-yellow uppercase	text-5xl sm:text-4xl mt-2 mb-4 font-bold'>designer & developer</h1>
+
+               <div className="text-port-yellow uppercase	text-5xl sm:text-4xl mt-2 mb-4 font-bold">
+                  <span className="block animate-text-slide text-center leading-tight">
+                    {texts[currentIndex]}
+                  </span>
+                </div>
+
+
+                {/* <h1 className='text-port-yellow uppercase	text-5xl sm:text-4xl mt-2 mb-4 font-bold'>designer & developer</h1> */}
                 <h3 className='text-xl text-white mb-4'>Hello, I' m</h3>
                 <h1 className='text-5xl sm:text-4xl text-white mb-5'>Sachinka Gunasekara</h1>
               </div>
@@ -127,7 +152,7 @@ export default function Home() {
               </a>
               </div>
 
-              <div className='flex justify-center gap-8 mt-10'>
+              <div className='flex justify-center gap-8 mt-5'>
                 <img
                     className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
                     src={linkedin}

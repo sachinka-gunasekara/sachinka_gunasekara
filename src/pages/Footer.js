@@ -77,6 +77,9 @@ export default function Home() {
                 /> 
             </button>
 
+            <div className='text-slate-400 text-xs text-center px-20 pt-10 sm:px-5'>
+                Copyright©2024 | Designed and Developed by Sachinka Gunasekara
+            </div>
         </div>
       </div>
   )
