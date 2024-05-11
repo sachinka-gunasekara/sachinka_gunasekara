@@ -23,9 +23,9 @@ export default function Home() {
       <div className="relative isolate px-6 pt-14 sm:pt-0 lg:px-8">
         <div className="mx-auto max-w-6xl py-8">
 
-          <div className='text-port-yellow uppercase text-4xl font-semibold sm:text-center pb-10'>
-            About
-          </div>
+            <div className='text-port-yellow uppercase text-4xl font-semibold sm:text-center pb-10'>
+              About
+            </div>
           
           <div className='text-white text-md text-left py-2 sm:text-justify sm:pl-0 pl-28'>
           Welcome to my portfolio! I'm passionate about creating seamless and delightful user experiences through thoughtful design and engineering. With a strong foundation in both design principles and technical skills, I strive to blend aesthetics with functionality to deliver impactful digital experiences.

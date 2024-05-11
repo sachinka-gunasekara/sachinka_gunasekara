@@ -2,18 +2,19 @@ import React from 'react';
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import profile from '../images/profile.jpg'
+import profile from '../images/profileX.svg'
 import logo from '../images/logo.svg'
 import linkedin from '../images/linkedin.svg'
 import behance from '../images/behance.svg'
 import github from '../images/github.svg'
 import About from './About';
 import Projects from './Projects';
+import Contact from './Footer';
 
 const navigation = [
   { name: 'About', href: '#about' },
   { name: 'Project', href: '#projects' },
-  { name: 'Contact', href: '#' },
+  { name: 'Contact', href: '#contact' },
 ]
 
 const scrollToSection = (id) => {
@@ -21,14 +22,6 @@ const scrollToSection = (id) => {
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' });
   }
-};
-
-const handleDownload = () => {
-  // Construct the absolute URL of the CV file
-  const cvUrl = process.env.PUBLIC_URL + '/my_cv.pdf';
-
-  // Open the PDF in a new tab
-  window.open(cvUrl, '_blank');
 };
 
 export default function Home() {
@@ -107,9 +100,9 @@ export default function Home() {
       </header>
 
       <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-6xl py-32">
+        <div className="mx-auto max-w-6xl pt-24">
           <div className="text-center flex justify-evenly sm:flex-col items-center mb-10">
-            <div className='size-64 flex justify-center'>
+            <div className='size-80 flex justify-center rounded-full'>
               <img
                   className="rounded-full"
                   src={profile}
@@ -125,8 +118,13 @@ export default function Home() {
               </div>
 
               <div className='flex gap-10 justify-center'>
+              <a href="https://drive.google.com/file/d/17debqREHcDsEmk1eabn-IvuMPKlCzd4o/view?usp=sharing" target="_blank">
                 <button className='px-6 py-2 text-black rounded-full transition ease-in-out delay-150 bg-port-yellow hover:-translate-y-1 hover:scale-105 hover:bg-port-hover duration-300 ...'>Download CV</button>
-                <button className='px-6 py-2 text-port-yellow border-2 rounded-full transition ease-in-out delay-150 border-port-yellow hover:-translate-y-1 hover:scale-105 hover:border-port-hover duration-300 ...'>Contact Info</button>
+                </a>
+
+                <a href="#contact">
+                <button href="#contact" className='px-6 py-2 text-port-yellow border-2 rounded-full transition ease-in-out delay-150 border-port-yellow hover:-translate-y-1 hover:scale-105 hover:border-port-hover duration-300 ...'>Contact Info</button>
+              </a>
               </div>
 
               <div className='flex justify-center gap-6 mt-8'>
@@ -134,16 +132,19 @@ export default function Home() {
                     className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
                     src={linkedin}
                     alt=""
+                    onClick={() => { window.open('https://www.linkedin.com/in/sachinka-gunasekara/', '_blank'); }}
                   />
                   <img
                     className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
                     src={github}
                     alt=""
+                    onClick={() => { window.open('https://github.com/sachinka-gunasekara', '_blank'); }}
                   />
                   <img
                     className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
                     src={behance}
                     alt=""
+                    onClick={() => { window.open('https://www.behance.net/sachinkgunasek', '_blank'); }}
                   />
               </div>
             </div>
@@ -155,6 +156,9 @@ export default function Home() {
           </section>
           <section id="projects">
             <Projects />
+          </section>
+          <section id="contact">
+            <Contact />
           </section>
         </div>
       </div>
