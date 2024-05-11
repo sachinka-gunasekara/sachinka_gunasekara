@@ -1,5 +1,5 @@
 import React from 'react';
-import github from '../images/github-142-svgrepo-com.svg'
+import github from '../images/github-svgrepo-com.svg'
 import behance from '../images/behance-svgrepo-com.svg'
 import web from '../images/world-svgrepo-com.svg'
 import coffee from '../images/coffee.svg'
