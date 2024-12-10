@@ -11,6 +11,8 @@ import portfolio from '../images/portfolio.svg'
 import fitbot from '../images/fitbot.svg'
 import dubai from '../images/dubai.svg'
 import eatme from '../images/eat.svg'
+import companyweb from '../images/company_web.svg'
+import smarthome from '../images/smarthome.svg'
 
 export default function Home() {
 
@@ -22,6 +24,58 @@ export default function Home() {
 
           <div className='flex justify-between gap-5 flex-wrap sm:flex-col mb-5'>
             
+              <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
+                <div className='aspect-auto'>
+                    <img
+                      className="mt-5 mb-10 mx-auto px-5"
+                      src={companyweb}
+                      alt="Customer web"
+                    />
+                </div>
+                <div className='text-white text-2xl text-center m-5 my-2'>Company Website</div>
+                <div className='text-port-yellow text-sm text-center m-5 my-0'>Development</div>
+                <div className='text-white text-sm text-justify m-5 line-clamp-3'>A cutting-edge company specializing in software development with a focus on seamlessly integrating hardware with IoT platforms.</div>
+                <div className='text-white text-sm text-center m-5 my-2'>Technologies: NextJS, Tailwind CSS</div>
+            
+                <div className='flex gap-10 justify-center items-center m-5'>
+                    <img
+                      className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
+                      src={github}
+                      alt=""
+                      onClick={() => { window.open('https://github.com/sachinka-gunasekara/circuitup', '_blank'); }}
+                    />
+                     <img
+                      className="size-7 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
+                      src={web}
+                      alt=""
+                      onClick={() => { window.open('https://circuitup.vercel.app/', '_blank'); }}
+                    />
+                </div>
+              </div>
+
+              <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
+                <div className='aspect-auto'>
+                    <img
+                      className="mt-5 mb-10 mx-auto px-5"
+                      src={smarthome}
+                      alt="smarthome"
+                    />
+                </div>
+                <div className='text-white text-2xl text-center m-5 my-2'>Smart Home Application</div>
+                <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX</div>
+                <div className='text-white text-sm text-justify m-5 line-clamp-3'>A sleek and intuitive UI design for a Smart Home application that empowers users to effortlessly control and monitor their connected devices.</div>
+               
+            
+                <div className='flex gap-10 justify-center items-center m-5'>
+                    <img
+                      className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
+                      src={behance}
+                      alt=""
+                      onClick={() => { window.open('https://www.behance.net/gallery/213497159/Smart-Home-Application', '_blank'); }}
+                    />
+                </div>
+              </div>
+
               <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
                 <div className='aspect-auto'>
                     <img
@@ -50,9 +104,11 @@ export default function Home() {
                     />
                 </div>
               </div>
-            
+                
+          </div>
 
-              <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
+          <div className='flex justify-between gap-5 flex-wrap sm:flex-col mb-5'>
+          <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
                 <img
                       className="mt-5 mb-10 mx-auto px-5"
                       src={slahandyfix}
@@ -95,28 +151,49 @@ export default function Home() {
                       />
                   </div>
                 </div>
-                
-          </div>
+            
+            <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
+                  <img
+                    className="mt-5 mb-10 mx-auto px-5"
+                    src={guru}
+                    alt="Guru"
+                  />
+  
+                  <div className='text-white text-2xl text-center m-5 my-2'>Guru</div>
+                  <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX, Team Work</div>
+                  <div className='text-white text-sm text-justify m-5 line-clamp-3'>An online learning platform, where students can learn with resources and educators provide resources </div>
+              
+                  <div className='flex gap-10 justify-center m-5'>
+                      <img
+                        className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
+                        src={behance}
+                        alt=""
+                        onClick={() => { window.open('https://www.behance.net/gallery/147823051/GURU-Online-Learning-Platform', '_blank'); }}
+                      />
+                  </div>
+                </div>
+  
+            </div>
 
           <div className='flex justify-between gap-5 flex-wrap sm:flex-col mb-5'>
             
           <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
                 <img
                   className="mt-5 mb-10 mx-auto px-5"
-                  src={guru}
-                  alt="Guru"
+                  src={dubai}
+                  alt="Travel Website"
                 />
 
-                <div className='text-white text-2xl text-center m-5 my-2'>Guru</div>
-                <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX, Team Work</div>
-                <div className='text-white text-sm text-justify m-5 line-clamp-3'>An online learning platform, where students can learn with resources and educators provide resources </div>
+                <div className='text-white text-2xl text-center m-5 my-2'>Dubai Travel Website</div>
+                <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX</div>
+                <div className='text-white text-sm text-justify m-5 line-clamp-3 h-[60px]'>A landing page for a Dubai travel website, showcasing attractions and tours</div>
             
                 <div className='flex gap-10 justify-center m-5'>
                     <img
                       className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
                       src={behance}
                       alt=""
-                      onClick={() => { window.open('https://www.behance.net/gallery/147823051/GURU-Online-Learning-Platform', '_blank'); }}
+                      onClick={() => { window.open('https://www.behance.net/gallery/190319241/Dubai-Travel-Website', '_blank'); }}
                     />
                 </div>
               </div>
@@ -164,29 +241,9 @@ export default function Home() {
                     />
                 </div>
             </div>
-              </div>
+          </div>
 
               <div className='flex justify-between gap-5 flex-wrap sm:flex-col mb-5'>
-              <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
-                <img
-                  className="mt-5 mb-10 mx-auto px-5"
-                  src={dubai}
-                  alt="Travel Website"
-                />
-
-                <div className='text-white text-2xl text-center m-5 my-2'>Dubai Travel Website</div>
-                <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX</div>
-                <div className='text-white text-sm text-justify m-5 line-clamp-3 h-[60px]'>A landing page for a Dubai travel website, showcasing attractions and tours</div>
-            
-                <div className='flex gap-10 justify-center m-5'>
-                    <img
-                      className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
-                      src={behance}
-                      alt=""
-                      onClick={() => { window.open('https://www.behance.net/gallery/190319241/Dubai-Travel-Website', '_blank'); }}
-                    />
-                </div>
-              </div>
 
               <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
                 <img
