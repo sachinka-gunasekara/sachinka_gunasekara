@@ -143,7 +143,7 @@ export default function Home() {
               </div>
 
               <div className='flex gap-10 justify-center'>
-              <a href="https://drive.google.com/file/d/17debqREHcDsEmk1eabn-IvuMPKlCzd4o/view?usp=sharing" target="_blank">
+              <a href="https://drive.google.com/file/d/1e_MDJ3ofsh_ZLMTa9cBLjGKsIlQDAepN/view?usp=sharing" target="_blank">
                 <button className='px-6 py-2 text-black rounded-full transition ease-in-out delay-150 bg-port-yellow hover:-translate-y-1 hover:scale-105 hover:bg-port-hover duration-300 ...'>Download CV</button>
                 </a>
 
