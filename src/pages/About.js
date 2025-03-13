@@ -30,7 +30,7 @@ export default function Home() {
           Welcome to my portfolio! I'm dedicated to crafting user experiences that seamlessly merge design and engineering, aiming for both aesthetic appeal and practical functionality. My educational background includes graduating from the University of Colombo School of Computing (UCSC), where I delved into UI/UX engineering and design. During my time at UCSC, I immersed myself in understanding user needs, mastering the art of translating these insights into intuitive interfaces that captivate users. My journey at UCSC has endowed me with a robust skill set, blending technical prowess with design principles to deliver impactful digital experiences.
           </div>
 
-          <div className='flex justify-center gap-16 flex-wrap sm:gap-10 pt-10'>
+          {/* <div className='flex justify-center gap-16 flex-wrap sm:gap-10 pt-10'>
           <img
                 className="size-20 sm:size-16 transition ease-in-out delay-75 hover:scale-125"
                 src={react}
@@ -107,7 +107,7 @@ export default function Home() {
                 src={mysql}
                 alt="MySQL"
               />
-          </div>
+          </div> */}
         </div>
       </div>
   )
