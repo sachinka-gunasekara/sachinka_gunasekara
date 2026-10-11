@@ -1,305 +1,265 @@
-import React from 'react';
-import github from '../images/github-svgrepo-com.svg'
-import behance from '../images/behance-svgrepo-com.svg'
-import web from '../images/world-svgrepo-com.svg'
-import coffee from '../images/coffee.svg'
-import leafylove from '../images/leafylove.svg'
-import italian from '../images/italian.svg'
-import guru from '../images/guru.svg'
-import slahandyfix from '../images/slhandyfix.svg'
-import portfolio from '../images/portfolio.svg'
-import fitbot from '../images/fitbot.svg'
-import dubai from '../images/dubai.svg'
-import eatme from '../images/eat.svg'
-import companyweb from '../images/company_web.svg'
-import smarthome from '../images/smarthome.svg'
+import React, { useState } from 'react';
+import github from '../images/github-svgrepo-com.svg';
+import behance from '../images/behance-svgrepo-com.svg';
+import web from '../images/world-svgrepo-com.svg';
+import coffee from '../images/coffee.svg';
+import leafylove from '../images/leafylove.svg';
+import italian from '../images/italian.svg';
+import guru from '../images/guru.svg';
+import slahandyfix from '../images/slhandyfix.svg';
+import portfolio from '../images/portfolio.svg';
+import fitbot from '../images/fitbot.svg';
+import dubai from '../images/dubai.svg';
+import eatme from '../images/eat.svg';
+import companyweb from '../images/company_web.svg';
+import smarthome from '../images/smarthome.svg';
+import devportfolio from '../images/devportfolio.svg';
+import novaai from '../images/novaai.svg';
 
-export default function Home() {
+const projectList = [
+  {
+    title: 'Modern Developer Portfolio & Landing Page (React + Tailwind)',
+    category: 'Development',
+    description: 'High-performance developer portfolio landing page built with React 19, TypeScript, and Tailwind CSS. Features an immersive midnight navy glassmorphism aesthetic, custom interactive UI mockups, fluid responsive navigation, and accessible high-contrast typography.',
+    technologies: 'React.js, Tailwind CSS, TypeScript',
+    image: devportfolio,
+    github: 'https://github.com/sachinka-gunasekara/webtemplate-portfolio.git',
+    web: 'https://webtemplate-portfolio.vercel.app/',
+  },
+  {
+    title: 'NOVA AI',
+    category: 'Development',
+    description: 'A premium, fully responsive SaaS landing page template for AI and tech startups. It has a bento-grid feature layout, glassmorphism styling, light/dark modes, and a live theme customizer.',
+    technologies: 'HTML, CSS, JavaScript',
+    image: novaai,
+    github: 'https://github.com/liorasoftware69/nova-liorasoftware.git',
+    web: 'https://sachinka-gunasekara.github.io/webtemplate1/',
+  },
+  {
+    title: 'Company Website (CircuitUp)',
+    category: 'Development',
+    description: 'A cutting-edge company website for software and IoT integration, featuring dynamic hardware interactions.',
+    technologies: 'Next.js, Tailwind CSS',
+    image: companyweb,
+    github: 'https://github.com/sachinka-gunasekara/circuitup',
+    web: 'https://circuitup.vercel.app/',
+  },
+  {
+    title: 'Smart Home Application',
+    category: 'UI/UX Design',
+    description: 'A sleek and intuitive UI design for a connected IoT smart home ecosystem allowing seamless device control.',
+    technologies: 'Figma, Prototyping',
+    image: smarthome,
+    behance: 'https://www.behance.net/gallery/213497159/Smart-Home-Application',
+  },
+  {
+    title: 'Personal Portfolio Website',
+    category: 'UI/UX & Development',
+    description: 'Modern developer portfolio with dynamic React components, type-safe architecture, and Tailwind CSS.',
+    technologies: 'React.js, Tailwind CSS',
+    image: portfolio,
+    github: 'https://github.com/sachinka-gunasekara/sachinka_gunasekara',
+    web: 'https://sachinkagunasekara-sachinka-gunasekaras-projects.vercel.app/',
+  },
+  {
+    title: 'SLHandyFix',
+    category: 'Development & UI/UX',
+    description: 'A platform connecting verified service technicians and homeowners under one roof for seamless maintenance.',
+    technologies: 'React, React Native, Node.js, Express, MySQL',
+    image: slahandyfix,
+    github: 'https://github.com/RAVINDULM/SLHandyFixMobile',
+  },
+  {
+    title: 'FitBot Gym Management',
+    category: 'Development & UI/UX',
+    description: 'Comprehensive platform for fitness facilities to streamline member attendance, subscriptions, and routines.',
+    technologies: 'HTML5, CSS3, JavaScript, Java, MySQL',
+    image: fitbot,
+    github: 'https://github.com/FITBOT-Gym-Management-System/Fitbot',
+  },
+  {
+    title: 'Guru Learning Platform',
+    category: 'UI/UX Design',
+    description: 'An interactive online education portal designed for accessible distance learning and student collaboration.',
+    technologies: 'Figma, User Research',
+    image: guru,
+    behance: 'https://www.behance.net/gallery/147823051/GURU-Online-Learning-Platform',
+  },
+  {
+    title: 'Dubai Travel Experience',
+    category: 'UI/UX Design',
+    description: 'An immersive editorial landing page showcasing attractions, city guides, and luxury desert tours in Dubai.',
+    technologies: 'Figma, Editorial UI',
+    image: dubai,
+    behance: 'https://www.behance.net/gallery/190319241/Dubai-Travel-Website',
+  },
+  {
+    title: 'LeafyLove Plant Care',
+    category: 'UI/UX Design',
+    description: 'Mobile companion app with intelligent watering schedules, plant health diagnoses, and sunlight tips.',
+    technologies: 'Mobile UI/UX, Figma',
+    image: leafylove,
+    behance: 'https://www.behance.net/gallery/191452447/LeafyLove',
+  },
+  {
+    title: 'CoffeeNook',
+    category: 'UI/UX Design',
+    description: 'An artisanal coffee shop e-commerce interface emphasizing product story, roasting notes, and beans ordering.',
+    technologies: 'E-commerce UI, Figma',
+    image: coffee,
+    behance: 'https://www.behance.net/gallery/192593643/Gourmet-coffee-shop',
+  },
+  {
+    title: 'Eat Me Dining',
+    category: 'UI/UX & Development',
+    description: 'A vibrant local culinary experience where bespoke design meets seamless online table reservations and dining.',
+    technologies: 'React, Tailwind CSS, Netlify',
+    image: eatme,
+    github: 'https://github.com/sachinka-gunasekara/eatme',
+    behance: 'https://www.behance.net/gallery/174493309/EAT-ME-Food-Ordering-Website',
+    web: 'https://dashing-palmier-2a86de.netlify.app/',
+  },
+  {
+    title: 'Classic Italian',
+    category: 'UI/UX Design',
+    description: 'A rich culinary showcase for an authentic trattoria highlighting handcrafted pasta recipes and wine pairings.',
+    technologies: 'Restaurant Branding, Figma',
+    image: italian,
+    behance: 'https://www.behance.net/gallery/198320201/Classic-Italian',
+  },
+];
+
+export default function Projects() {
+  const [filter, setFilter] = useState('All');
+
+  const filteredProjects = projectList.filter((proj) => {
+    if (filter === 'All') return true;
+    if (filter === 'Development') return proj.category.includes('Development');
+    if (filter === 'UI/UX') return proj.category.includes('UI/UX');
+    return true;
+  });
 
   return (
-      <div className="relative isolate px-6 pt-14 sm:pt-0 lg:px-8">
-          <div className='text-port-yellow uppercase text-4xl font-semibold sm:text-center pb-10'>
-            Projects
+    <div className="relative isolate py-12">
+      <div className="mx-auto max-w-5xl">
+        
+        {/* Section Heading */}
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-xs font-mono text-cyan-300 mb-3 shadow-[0_0_12px_rgba(56,189,248,0.2)]">
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+            <span>Featured Portfolio</span>
           </div>
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white mb-6">
+            Selected Projects
+          </h2>
 
-          <div className='flex justify-between gap-5 flex-wrap sm:flex-col mb-5'>
-            
-              <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
-                <div className='aspect-auto'>
-                    <img
-                      className="mt-5 mb-10 mx-auto px-5"
-                      src={companyweb}
-                      alt="Customer web"
-                    />
-                </div>
-                <div className='text-white text-2xl text-center m-5 my-2'>Company Website</div>
-                <div className='text-port-yellow text-sm text-center m-5 my-0'>Development</div>
-                <div className='text-white text-sm text-justify m-5 line-clamp-3'>A cutting-edge company specializing in software development with a focus on seamlessly integrating hardware with IoT platforms.</div>
-                <div className='text-white text-sm text-center m-5 my-2'>Technologies: NextJS, Tailwind CSS</div>
-            
-                <div className='flex gap-10 justify-center items-center m-5'>
-                    <img
-                      className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
-                      src={github}
-                      alt=""
-                      onClick={() => { window.open('https://github.com/sachinka-gunasekara/circuitup', '_blank'); }}
-                    />
-                     <img
-                      className="size-7 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
-                      src={web}
-                      alt=""
-                      onClick={() => { window.open('https://circuitup.vercel.app/', '_blank'); }}
-                    />
-                </div>
-              </div>
-
-              <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
-                <div className='aspect-auto'>
-                    <img
-                      className="mt-5 mb-10 mx-auto px-5"
-                      src={smarthome}
-                      alt="smarthome"
-                    />
-                </div>
-                <div className='text-white text-2xl text-center m-5 my-2'>Smart Home Application</div>
-                <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX</div>
-                <div className='text-white text-sm text-justify m-5 line-clamp-3'>A sleek and intuitive UI design for a Smart Home application that empowers users to effortlessly control and monitor their connected devices.</div>
-               
-            
-                <div className='flex gap-10 justify-center items-center m-5'>
-                    <img
-                      className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
-                      src={behance}
-                      alt=""
-                      onClick={() => { window.open('https://www.behance.net/gallery/213497159/Smart-Home-Application', '_blank'); }}
-                    />
-                </div>
-              </div>
-
-              <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
-                <div className='aspect-auto'>
-                    <img
-                      className="mt-5 mb-10 mx-auto px-5"
-                      src={portfolio}
-                      alt="Portfolio"
-                    />
-                </div>
-                <div className='text-white text-2xl text-center m-5 my-2'>Portfolio Website</div>
-                <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX, Development</div>
-                <div className='text-white text-sm text-justify m-5 line-clamp-3'>A portfolio website, from dynamic React components to polished designs with Tailwind CSS</div>
-                <div className='text-white text-sm text-center m-5 my-2'>Technologies: ReactJS, Tailwind CSS</div>
-            
-                <div className='flex gap-10 justify-center items-center m-5'>
-                    <img
-                      className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
-                      src={github}
-                      alt=""
-                      onClick={() => { window.open('https://github.com/sachinka-gunasekara/sachinka_gunasekara', '_blank'); }}
-                    />
-                     <img
-                      className="size-7 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
-                      src={web}
-                      alt=""
-                      onClick={() => { window.open('https://sachinkagunasekara-sachinka-gunasekaras-projects.vercel.app/', '_blank'); }}
-                    />
-                </div>
-              </div>
-                
+          {/* Filter Pills */}
+          <div className="inline-flex p-1 rounded-full bg-white/[0.04] backdrop-blur-md border border-white/10 shadow-glass-sm gap-1">
+            {['All', 'Development', 'UI/UX'].map((tab) => (
+              <button
+                key={tab}
+                type="button"
+                onClick={() => setFilter(tab)}
+                className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${
+                  filter === tab
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-[0_0_15px_rgba(14,165,233,0.4)]'
+                    : 'text-slate-400 hover:text-white hover:bg-white/5'
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
           </div>
-
-          <div className='flex justify-between gap-5 flex-wrap sm:flex-col mb-5'>
-          <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
-                <img
-                      className="mt-5 mb-10 mx-auto px-5"
-                      src={slahandyfix}
-                      alt="SLHandyFix"
-                    />
-
-              <div className='text-white text-2xl text-center m-5 my-2'>SLHandyFix</div>
-                <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX, Development, Group Project</div>
-                <div className='text-white text-sm text-justify m-5 line-clamp-3'>A platform to connect service providers and customers under one roof for facilitating their needs</div>
-                <div className='text-white text-sm text-center m-5 my-2'>Technologies: React, React Native, NodeJS, Express, MySQL</div>
-            
-                <div className='flex gap-10 justify-center m-5'>
-                    <img
-                      className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
-                      src={github}
-                      alt=""
-                      onClick={() => { window.open('https://github.com/RAVINDULM/SLHandyFixMobile', '_blank'); }}
-                    />
-                </div>
-              </div>
-
-              <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
-                  <img
-                    className="mt-5 mb-10 mx-auto px-5"
-                    src={fitbot}
-                    alt="FitBot"
-                  />
-
-                  <div className='text-white text-2xl text-center m-5 my-2'>FitBot</div>
-                  <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX, Development, Group Project</div>
-                  <div className='text-white text-sm text-justify m-5 line-clamp-3 h-[60px]'>A platform that could be used by the Gym management to manage their members</div>
-                  <div className='text-white text-sm text-center m-5 my-2'>Technologies: HTML5, CSS, Javascript, Java, MySQL</div>
-              
-                  <div className='flex gap-10 justify-center m-5'>
-                      <img
-                        className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
-                        src={github}
-                        alt=""
-                        onClick={() => { window.open('https://github.com/FITBOT-Gym-Management-System/Fitbot', '_blank'); }}
-                      />
-                  </div>
-                </div>
-            
-            <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
-                  <img
-                    className="mt-5 mb-10 mx-auto px-5"
-                    src={guru}
-                    alt="Guru"
-                  />
-  
-                  <div className='text-white text-2xl text-center m-5 my-2'>Guru</div>
-                  <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX, Team Work</div>
-                  <div className='text-white text-sm text-justify m-5 line-clamp-3'>An online learning platform, where students can learn with resources and educators provide resources </div>
-              
-                  <div className='flex gap-10 justify-center m-5'>
-                      <img
-                        className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
-                        src={behance}
-                        alt=""
-                        onClick={() => { window.open('https://www.behance.net/gallery/147823051/GURU-Online-Learning-Platform', '_blank'); }}
-                      />
-                  </div>
-                </div>
-  
-            </div>
-
-          <div className='flex justify-between gap-5 flex-wrap sm:flex-col mb-5'>
-            
-          <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
-                <img
-                  className="mt-5 mb-10 mx-auto px-5"
-                  src={dubai}
-                  alt="Travel Website"
-                />
-
-                <div className='text-white text-2xl text-center m-5 my-2'>Dubai Travel Website</div>
-                <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX</div>
-                <div className='text-white text-sm text-justify m-5 line-clamp-3 h-[60px]'>A landing page for a Dubai travel website, showcasing attractions and tours</div>
-            
-                <div className='flex gap-10 justify-center m-5'>
-                    <img
-                      className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
-                      src={behance}
-                      alt=""
-                      onClick={() => { window.open('https://www.behance.net/gallery/190319241/Dubai-Travel-Website', '_blank'); }}
-                    />
-                </div>
-              </div>
-
-            <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
-              <div className='aspect-auto'>
-                  <img
-                    className="mt-5 mb-10 mx-auto px-5 5"
-                    src={leafylove}
-                    alt="LeafyLove"
-                  />
-              </div>
-              <div className='text-white text-2xl text-center m-5 my-2'>LeafyLove</div>
-              <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX</div>
-              <div className='text-white text-sm text-justify m-5 line-clamp-3 h-[60px]'>Mobile interfaces for a plant care app with watering reminders and plant health tips</div>
-          
-              <div className='flex gap-10 justify-center m-5'>
-                  <img
-                    className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
-                    src={behance}
-                    alt=""
-                    onClick={() => { window.open('https://www.behance.net/gallery/191452447/LeafyLove', '_blank'); }}
-                  />
-              </div>
-            </div>
-          
-
-            <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
-            <img
-                  className="mt-5 mb-10 mx-auto px-5"
-                  src={coffee}
-                  alt="coffeenook"
-                />
-
-                <div className='text-white text-2xl text-center m-5 my-2'>CoffeeNook</div>
-                <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX</div>
-                <div className='text-white text-sm text-justify m-5 line-clamp-3'>A web design for a gourmet coffee shop, focusing on product showcase and online ordering</div>
-            
-                <div className='flex gap-10 justify-center m-5'>
-                    <img
-                      className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
-                      src={behance}
-                      alt=""
-                      onClick={() => { window.open('https://www.behance.net/gallery/192593643/Gourmet-coffee-shop', '_blank'); }}
-                    />
-                </div>
-            </div>
-          </div>
-
-              <div className='flex justify-between gap-5 flex-wrap sm:flex-col mb-5'>
-
-              <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
-                <img
-                  className="mt-5 mb-10 mx-auto px-5"
-                  src={eatme}
-                  alt="Eat me"
-                />
-
-                <div className='text-white text-2xl text-center m-5 my-2'>Eat me</div>
-                <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX, Development</div>
-                <div className='text-white text-sm text-justify m-5 line-clamp-3'>A web design local restaurant where Design Meets Dining Delight! , focusing on product showcase</div>
-            
-                <div className='flex gap-10 justify-center items-center m-5'>
-                    <img
-                      className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
-                      src={github}
-                      alt=""
-                      onClick={() => { window.open('https://github.com/sachinka-gunasekara/eatme', '_blank'); }}
-                    />
-                    <img
-                      className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
-                      src={behance}
-                      alt=""
-                      onClick={() => { window.open('https://www.behance.net/gallery/174493309/EAT-ME-Food-Ordering-Website', '_blank'); }}
-                    />
-                     <img
-                      className="size-7 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
-                      src={web}
-                      alt=""
-                      onClick={() => { window.open('https://dashing-palmier-2a86de.netlify.app/', '_blank'); }}
-                    />
-                </div>
-              </div>
-
-              <div className="flex-1 bg-port-opyellow rounded-xl transition ease-in-out delay-75 hover:scale-105">
-                <img
-                  className="mt-5 mb-10 mx-auto px-5"
-                  src={italian}
-                  alt="Classic Italian"
-                />
-
-                <div className='text-white text-2xl text-center m-5 my-2'>Classic Italian</div>
-                <div className='text-port-yellow text-sm text-center m-5 my-0'>UI/UX</div>
-                <div className='text-white text-sm text-justify m-5 line-clamp-3 h-[60px]'>A web design for an italian classic restaurant, focusing on product showcase</div>
-            
-                <div className='flex gap-10 justify-center m-5'>
-                    <img
-                      className="size-8 transition ease-in-out delay-75 hover:scale-125 cursor-pointer"
-                      src={behance}
-                      alt=""
-                      onClick={() => { window.open('https://www.behance.net/gallery/198320201/Classic-Italian', '_blank'); }}
-                    />
-                </div>
-              </div>
-              
         </div>
+
+        {/* 3-Column Glassmorphic Project Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredProjects.map((project, idx) => (
+            <div
+              key={idx}
+              className="group glass-card rounded-3xl p-5 sm:p-6 shadow-glass-sm hover:shadow-glass-md hover:border-white/20 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5"
+            >
+              <div>
+                {/* Project Image Frame */}
+                <div className="rounded-2xl overflow-hidden bg-navy-950/70 p-4 border border-white/5 mb-4 group-hover:border-cyan-400/30 transition-colors flex items-center justify-center min-h-[160px]">
+                  <img
+                    className="max-h-36 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                    src={project.image}
+                    alt={project.title}
+                  />
+                </div>
+
+                {/* Category Tag */}
+                <div className="mb-2">
+                  <span className="inline-block px-2.5 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-400/20 text-cyan-300 text-[11px] font-mono">
+                    {project.category}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-lg font-semibold text-white tracking-tight mb-2 group-hover:text-cyan-300 transition-colors">
+                  {project.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-xs text-slate-300 leading-relaxed mb-4 line-clamp-3">
+                  {project.description}
+                </p>
+              </div>
+
+              <div>
+                {/* Tech Badge */}
+                <div className="pt-3 border-t border-white/10 mb-4">
+                  <span className="text-[11px] font-mono text-slate-400 block truncate">
+                    {project.technologies}
+                  </span>
+                </div>
+
+                {/* Action Links in Frosted Glass Circles */}
+                <div className="flex items-center gap-2.5 justify-end">
+                  {project.github && (
+                    <button
+                      type="button"
+                      onClick={() => window.open(project.github, '_blank')}
+                      className="p-2 rounded-full bg-white/[0.04] hover:bg-white/[0.1] border border-white/10 hover:border-cyan-400/40 transition-all duration-200 cursor-pointer shadow-glass-sm"
+                      title="View GitHub Repository"
+                      aria-label="GitHub"
+                    >
+                      <img className="size-4" src={github} alt="GitHub" />
+                    </button>
+                  )}
+
+                  {project.behance && (
+                    <button
+                      type="button"
+                      onClick={() => window.open(project.behance, '_blank')}
+                      className="p-2 rounded-full bg-white/[0.04] hover:bg-white/[0.1] border border-white/10 hover:border-cyan-400/40 transition-all duration-200 cursor-pointer shadow-glass-sm"
+                      title="View Behance Project"
+                      aria-label="Behance"
+                    >
+                      <img className="size-4" src={behance} alt="Behance" />
+                    </button>
+                  )}
+
+                  {project.web && (
+                    <button
+                      type="button"
+                      onClick={() => window.open(project.web, '_blank')}
+                      className="p-2 rounded-full bg-white/[0.04] hover:bg-white/[0.1] border border-white/10 hover:border-cyan-400/40 transition-all duration-200 cursor-pointer shadow-glass-sm"
+                      title="Open Live Website"
+                      aria-label="Live Website"
+                    >
+                      <img className="size-4" src={web} alt="Live Web" />
+                    </button>
+                  )}
+                </div>
+              </div>
+
+            </div>
+          ))}
+        </div>
+
       </div>
-  )
+    </div>
+  );
 }
